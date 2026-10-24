@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090819">
+  <meta name="description" content="一片只属于我们的星空，收藏照片、回忆和愿望。">
+  <title>写给你的星空 · Romantic Starry Night</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <div class="sky-glow sky-glow-one" aria-hidden="true"></div>
+  <div class="sky-glow sky-glow-two" aria-hidden="true"></div>
+  <header class="site-header shell">
+    <a class="brand" href="#home" aria-label="回到首页"><span class="brand-star">✦</span> OUR LITTLE UNIVERSE</a>
+    <nav aria-label="页面导航"><a href="#memories">时光墙</a><a href="#wishes">许愿星空</a></nav>
+  </header>
+  <main>
+    <section class="hero shell" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="eyebrow-line"></span> A LETTER WRITTEN IN THE STARS</span>
+        <h1 id="hero-title">今晚的星星，<br><em>都为你闪烁。</em></h1>
+        <p>宇宙那么大，能和你相遇，是我最喜欢的奇迹。把我们的回忆放进星光里，也把未来的愿望悄悄许给夜空。</p>
+        <a class="pill-button" href="#memories">走进我们的故事 <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="heart-stage" aria-label="可互动的爱心星座。用鼠标或手指触碰，星光会散开后重新聚集。">
+        <canvas id="heart" aria-hidden="true"></canvas>
+        <div class="heart-halo" aria-hidden="true"></div>
+        <span class="heart-hint">轻触星光，心动会发生 ✧</span>
+      </div>
+      <div class="hero-bottom"><span>SCROLL TO EXPLORE</span><span class="down-line" aria-hidden="true"></span><span>01 / ∞</span></div>
+    </section>
+    <section class="memories-section shell" id="memories" aria-labelledby="memories-title">
+      <div class="section-heading"><span class="eyebrow"><span class="eyebrow-line"></span> THE MOMENTS WE KEEP</span><h2 id="memories-title">把时光，<em>藏进星河。</em></h2><p>六个小小的瞬间，装下我们大大的故事。轻点一张卡片，重读那天的心动。</p></div>
+      <div class="photo-grid" id="photo-grid"></div>
+    </section>
+    <section class="quote-section shell" aria-label="情话"><div class="quote-card"><span class="quote-star">✦</span><p>“如果夜空有尽头，我也想和你一起，走到最后一颗星星那里。”</p><span class="quote-end">— TO YOU, ALWAYS</span></div></section>
+    <section class="wishes-section shell" id="wishes" aria-labelledby="wishes-title">
+      <div class="section-heading"><span class="eyebrow"><span class="eyebrow-line"></span> MAKE A WISH WITH ME</span><h2 id="wishes-title">把愿望，<em>交给星空。</em></h2><p>写下一句只属于我们的心愿。按下发射，它会成为夜空里的一颗星，并留在这台设备上。</p></div>
+      <div class="wish-panel glass"><label for="wish-input">今晚，你想许下什么愿望？</label><form id="wish-form"><input id="wish-input" type="text" maxlength="80" placeholder="比如：和你一起看更多次日落……" autocomplete="off" required><button type="submit">发射到星空 <span aria-hidden="true">↗</span></button></form><p class="wish-tip">每一颗愿望星都可以轻点查看。愿望仅保存在当前浏览器中。</p></div>
+      <div class="wish-list-wrap"><h3>已经点亮的愿望 <span id="wish-count">00</span></h3><div class="wish-list" id="wish-list"><p class="empty-wishes">第一颗星星，等你来点亮。</p></div></div>
+    </section>
+  </main>
+  <footer class="site-footer shell"><span>✦ OUR LITTLE UNIVERSE</span><span>写给你，也写给我们未完待续的故事。</span><a href="#home">回到星空 ↑</a></footer>
+  <dialog id="memory-dialog" class="memory-dialog"><button class="dialog-close" id="dialog-close" type="button" aria-label="关闭回忆">×</button><div id="dialog-image" class="dialog-image"></div><div class="dialog-content"><span id="dialog-number" class="dialog-number"></span><h3 id="dialog-title"></h3><p id="dialog-text"></p></div></dialog>
+  <div id="shooting-message" class="visually-hidden" role="status" aria-live="polite"></div>
+</body>
+</html>
