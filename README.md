@@ -11,7 +11,7 @@
 
 ## 使用
 
-直接打开 `index.html`。启用 GitHub Pages 后，也可以通过仓库的 Pages 链接在线访问。
+直接打开 `index.html`，或访问 [在线演示](https://mamba261.github.io/romantic-starry-night/)。
 
 替换照片和故事：
 
